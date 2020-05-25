@@ -31,18 +31,18 @@ timestamps {
 
         }
     }
-    stage('Compile') {
+    /*stage('Compile') {
         withGradle {
             sh 'gradle jar'
         }
-    }
+    }*/
 
     stage('Unit-tests') {
         withGradle {
             try {
                 sh 'gradle build'
             } finally {
-                junit 'build/test-results/test/*.xml'
+                sh 'gradle test'
             }
         }
     }
