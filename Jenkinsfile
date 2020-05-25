@@ -22,8 +22,8 @@ timestamps {
                                                                    mergeTarget    : target_branch]
                                                          ]],
                      submoduleCfg                     : [],
-                     userRemoteConfigs                : [[credentialsId: 'test_ci_creds',
-                                                          url          : 'ssh://git@github.com:cozydnb/test_ci.git']]]
+                     userRemoteConfigs                : [[credentialsId: 'name_pass_id',
+                                                          url          : 'https://github.com/cozydnb/test_ci.git']]]
 
             )
 
