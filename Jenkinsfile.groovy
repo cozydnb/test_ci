@@ -22,9 +22,9 @@ timestamps {
                                                                    mergeTarget    : target_branch]
                                                          ]],
                      submoduleCfg                     : [],
-                     userRemoteConfigs                : [[credentialsId: 'pHAPTCI_gitlab',
-                                                          url          : 'ssh://git@git.huawei.com:2222/' +
-                                                                  'program-analysis-group-russia-rd/HPAT.git']]]
+                     userRemoteConfigs                : [[credentialsId: 'test_ci_creds',
+                                                          url          : 'ssh://git@github.com:cozydnb/test_ci.git']]]
+
             )
 
             // main_branch = main_branch.replace("origin/", "")
