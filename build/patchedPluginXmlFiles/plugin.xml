@@ -1,0 +1,25 @@
+<idea-plugin>
+  <version>2.0.0</version>
+  <idea-version since-build="201" until-build="201.*"/>
+  <id>org.intelliJ.sdk.codeInspection</id>
+  <name>SDK: Comparing References Inspection Sample</name>
+  <depends>com.intellij.modules.java</depends>
+  <description>
+    
+      Demonstrates implementing a Local Inspection Tool.&lt;br&gt; Adds entries to &lt;b&gt;Preferences | Editor | Inspections | Java | Probable Bugs&lt;/b&gt;.
+    
+  </description>
+  <change-notes>
+    
+      &lt;ul&gt;
+        &lt;li&gt;&lt;b&gt;2.0.0&lt;/b&gt; Convert to Gradle-based plugin.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;1.1.0&lt;/b&gt; Refactor resources, register this inspection.&lt;/li&gt;
+        &lt;li&gt;&lt;b&gt;1.0.0&lt;/b&gt; Release 2018.3 and earlier.&lt;/li&gt;
+      &lt;/ul&gt;
+    
+  </change-notes>
+  <vendor url="https://plugins.jetbrains.com">IntelliJ Platform SDK</vendor>
+  <extensions defaultExtensionNs="com.intellij">
+    <localInspection language="JAVA" displayName="SDK: '==' or '!=' used instead of 'equals()'" groupPath="Java" groupBundle="messages.InspectionsBundle" groupKey="group.names.probable.bugs" enabledByDefault="true" level="WARNING" implementationClass="org.intellij.sdk.codeInspection.ComparingReferencesInspection"/>
+  </extensions>
+</idea-plugin>
