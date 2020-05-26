@@ -38,11 +38,13 @@ timestamps {
     }*/
 
     stage('Unit-tests') {
+        withGradle {
             try {
                 sh 'gradle build'
             } finally {
                 sh 'gradle test'
             }
+        }
     }
 
     //-------------------------DEPLOY PART--------------------------------------------------
