@@ -1,6 +1,6 @@
 timestamps {
-    def main_branch = ""
     node('master') {
+    def main_branch = ""
         stage('Preparation') {
             cleanWs()
             main_branch = "origin/master"
