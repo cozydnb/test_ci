@@ -31,18 +31,18 @@ timestamps {
 
         }
     }
-    /*stage('Compile') {
+    stage('Compile') {
         withGradle {
-            sh 'gradle jar'
+            sh './gradlew jar'
         }
-    }*/
+    }
 
     stage('Unit-tests') {
         withGradle {
             try {
-                sh 'gradle build'
+                sh './gradlew build'
             } finally {
-                sh 'gradle test'
+                sh './gradlew test'
             }
         }
     }
