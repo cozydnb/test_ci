@@ -16,14 +16,22 @@ pipeline {
 
       stage('build') {
             steps {
-                 bat(/gradle build/)
+               if (isUnix()) {
+                  sh 'gradle build'
+               } else {
+                  bat(/gradle build/)
+               }
             }
       }
 
       stage('tests') {
           steps {
-              bat(/gradle test/)
-          }
+               if (isUnix()) {
+                  sh 'gradle test'
+               } else {
+                  bat(/gradle test/)
+               }
+            }
       }
    }
 }
