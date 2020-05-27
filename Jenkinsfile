@@ -1,5 +1,4 @@
-pipeline {
-   agent any
+node {
 
    tools {
       // Install the gradle version configured as "G6" and add it to the path.
